@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 LABEL version "1.1"
 LABEL description "Headless unstable Google chrome."
 
-ENV APT_PACKAGES apt-transport-https curl
+ENV APT_PACKAGES wget curl unzip apt-transport-https ca-certificates
 ENV CHROME_USER chrome
 
 RUN mkdir -p /home/${CHROME_USER} && \
